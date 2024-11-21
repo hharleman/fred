@@ -10,6 +10,7 @@ import requests
 import pandas as pd
 import sqlalchemy
 from sqlalchemy import create_engine
+import psycopg2
 
 # Define your API key and FRED API URLs for CPI, GDP, and Unemployment Rate
 api_key = 'c081e5bfcdb59bb8856c4a91a95640c2'
