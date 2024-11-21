@@ -5,9 +5,10 @@
 
 # In[1]:
 
-
+import streamlit as st
 import requests
 import pandas as pd
+import plotly.express as px
 import sqlalchemy
 from sqlalchemy import create_engine
 import psycopg2
@@ -103,10 +104,6 @@ cpi_max_delta = round(((cpi_max_value - cpi_dec_value) / cpi_dec_value) *100, 2)
 # In[4]:
 
 
-#pip install streamlit
-import streamlit as st
-
-
 # In[5]:
 
 
@@ -139,10 +136,6 @@ with col2:
 
 
 # In[16]:
-
-
-import plotly.express as px
-
 #cpi_data['date'] = pd.to_datetime(cpi_data['date'])
 fig = px.line(cpi_data, x = 'date', y = 'value', title = 'Consumer Price Index (CPI)')
 st.plotly_chart(fig)
@@ -207,10 +200,6 @@ with col2:
 # #### Chart
 
 # In[ ]:
-
-
-import plotly.express as px
-
 #cpi_data['date'] = pd.to_datetime(cpi_data['date'])
 fig = px.line(gdp_data, x = 'date', y = 'value', title = 'Gross Domestic Product (GDP)')
 st.plotly_chart(fig)
@@ -277,9 +266,6 @@ with col2:
 
 # In[ ]:
 
-
-import plotly.express as px
-
 #cpi_data['date'] = pd.to_datetime(cpi_data['date'])
 fig = px.line(unemployment_data, x = 'date', y = 'value', title = 'Unemployment Rate')
 st.plotly_chart(fig)
@@ -301,10 +287,6 @@ st.write("Stay informed about the latest developments in the U.S. economy by exp
 
 
 # In[ ]:
-
-
-import requests
-
 API_KEY = '693382eb44694e848cd653f4ba8e51c4'
 URL = 'https://newsapi.org/v2/top-headlines'
 
