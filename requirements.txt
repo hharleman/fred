@@ -1,4 +1,4 @@
 streamlit
-sqlalchemy
+sqlalchemy==1.4.39
 pandas
 requests
